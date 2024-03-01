@@ -1,16 +1,189 @@
 ---
-
+import Billeder from "../components/Billeder.astro";
+import Info from "../components/Info.astro";
+import "../stylesheet/style.css";
+import ScrollDown from "../components/ScrollDown.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Chrystal Jørgensen - Multimediedesigner</title>
+  </head>
+  <body>
+    <div class="grid_1-3">
+      <div class="banner">
+        <div class="about">
+          <img src="../img/profil2.png" alt="" />
+          <h3>Chrystal Jørgensen</h3>
+        </div>
+
+        <div class="oplysninger">
+          <Info
+            image="../img/fi-sr-envelope(1).png"
+            alttekst="mail"
+            info_tekst="https://outlook.live.com/"
+            linktekst="chrystal-andersen@hotmail.com"
+          />
+
+          <Info
+            image="../img/fi-sr-phone-call.png"
+            alttekst="mobil"
+            info_tekst="tel: +45 21 27 26 70"
+            linktekst="+45 21 27 26 70"
+          />
+
+          <Info
+            image="../img/linkedin_254394_white.png"
+            alttekst="linkedin"
+            info_tekst="https://www.linkedin.com/in/chrystal-jørgensen/"
+            linktekst="Klik her for Linkedin profil"
+          />
+
+          <Info
+            image="../img/git.png"
+            alttekst="github"
+            info_tekst="https://github.com/ChrysMMD"
+            linktekst="Klik her for Github profil"
+          />
+        </div>
+      </div>
+
+      <div class="grid_1-1">
+        <div class="headline">
+          <h1>Hello!</h1>
+          <h2>Jeg er Chrys!</h2>
+        </div>
+
+        <h3>Hvem er jeg?</h3>
+        <section class="aboutme">
+          <p>
+            Organiseret, nede-på-jorden, kreativ sjæl, der arbejder godt i både
+            <strong>teams og selvstændigt</strong>. Bedst fungere jeg i et
+            arbejdsmiljø, hvor der er struktur samt opfordrelse til en sund
+            <strong>“work/life” balance</strong> - hybridarbejde er et plus men ikke
+            et “must”. <br />
+            Jeg har meget erfaring i <strong
+              >forskellige kreative løsninger</strong
+            > og har været freelance i mange år med eget kontor i Viborg. Helst vil
+            jeg gerne fortsætte med at nørde og fokusere på <strong
+              >bæredygtige løsninger</strong
+            >
+            samt fortsat arbejde med minimale AI-værktøjer. <br />Mere
+            personligt er jeg en <strong
+              >smilende og imødekommende person</strong
+            >, som altid har været <strong>
+              tilknyttet den kreative, professionelle branche
+            </strong> men med forskellige hatte på som fks fotograf og senere assistere
+            til projektstyrelse af konferencen AniBiz og GameJam. <br />Jeg er
+            meget <strong>nede på jorden</strong> og kan godt lide at være organiseret.
+            Jeg er en selverklæret ildsjæl, go getter og <strong
+              >asskicker</strong
+            >, som er vant til at hjælpe til med at starte ting op, give en hånd
+            med hvor der er brug for det, og tilføje til diskussioner eller
+            opgaver. <br />Under uddannelser har jeg altid taget en rolle som <strong
+              >leder eller tovholder</strong
+            > på grund af mine evner til at arbejde <strong
+              >struktureret og organiseret</strong
+            >, samt er god til at lytte til folks behov og uddelegere opgaver.
+            Det giver mig ro, at have et overblik over tingene samt vide
+            præcist, hvad der skal gøres til hvilket deadlines.
+          </p>
+        </section>
+
+        <ScrollDown />
+
+        <hr class="colored_line" />
+
+        <div>
+          <h3>Hvad kan jeg?</h3>
+          <section class="kompetancer">
+            <div>
+              <h4>Værktøjer/programmer:</h4>
+              <ul>
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+                <li>Bridge</li>
+                <li>XD</li>
+                <li>Visual Code Studio</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4>Emner og fagligheder:</h4>
+              <ul>
+                <li>Content Creation</li>
+                <li>Projektstyring</li>
+                <li>UX/UI</li>
+                <li>Digital Design</li>
+                <li>Grafisk Design</li>
+                <li>Billedbehandling</li>
+                <li>Webdevelopment</li>
+                <li>Webdesign</li>
+                <li>Prototyping</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4>Sprog og kodebiblioteker:</h4>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>Astro</li>
+                <li>React</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <section>
+          <h3>Hvad kan jeg tilbyde?</h3>
+          <ul>
+            <li>
+              Stor erfaring med at være i et fagligt, kreativt designmæssigt
+              arbejdsmiljø.
+            </li>
+            <li>
+              På grund af allerede erfaring bruges uddannelsen på at fokusere på
+              FrontEnd og andre ting, jeg ikke har benyttet mig så meget af før.
+            </li>
+            <li>Analytisk og organiseret sind</li>
+            <li>
+              Fokus på digital bæredygtighed og design, hvilket er meget oppe i
+              tiden.
+            </li>
+            <li>
+              Bruger fritiden på Code Academy og grafisk arbejde for
+              foreningsmiljøer
+            </li>
+          </ul>
+        </section>
+
+        <hr class="colored_line" />
+
+        <div class="billeder_cont">
+          <h3>Projekter</h3>
+          <section class="billeder">
+            <Billeder
+              text="Web for UX Copenhagen med bæredygtighed og UX i fokus"
+              img="../img/ux.png"
+            />
+            <Billeder text="Web og SoMe for CA A-kasse" img="../img/ca.png" />
+            <Billeder
+              text="Projektarbejde og digital design i Figma"
+              img="../img/figma.png"
+            />
+            <Billeder
+              text="Brainstorming og ideudvikling"
+              img="../img/brainstorm.png"
+            />
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

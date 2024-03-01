@@ -1,0 +1,21 @@
+---
+const image = Astro.props.image;
+const info_tekst = Astro.props.info_tekst;
+const alttekst = Astro.props.alttekst;
+const linktekst = Astro.props.linktekst;
+---
+
+<div class="info_individuelt">
+  <img src={image} alt={alttekst} />
+  <a href={info_tekst} target="_blank">{linktekst}</a>
+</div>
+
+<style>
+  .info_individuelt {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+</style>
