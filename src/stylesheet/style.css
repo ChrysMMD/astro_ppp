@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --rød: #fa5d5d;
+  --dark: #3f4140;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 @font-face {
   font-family: "Nexa";
   src: url("../fonts/Nexa-Heavy.ttf");
@@ -37,7 +47,6 @@ h3,
 h4 {
   font-family: "Nexa", sans-serif;
   color: #e9e9e9;
-
   margin-bottom: 5px;
 }
 
@@ -48,6 +57,7 @@ li {
   font-size: 16px;
   color: #e9e9e9;
   margin-bottom: 10px;
+  margin-left: 1rem;
   line-height: 23px;
 }
 
@@ -55,103 +65,159 @@ h1 {
   font-size: 100px;
   margin-bottom: -70px;
   margin-top: -20px;
+  text-align: center;
 }
 
 h2 {
   font-size: 100px;
-  margin-left: 97px;
-  margin-bottom: -50px;
+  margin: 25px 0px 90px 0;
   color: transparent;
   -webkit-text-stroke: 1px #e9e9e9;
+  line-height: 100px;
+  text-align: center;
 }
 
 h3 {
   font-size: 25px;
-  margin-bottom: 10px;
-  margin-top: -50px;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 h4 {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: -5px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
 }
 
-.banner h3 {
-  margin-top: 10px;
-  margin-bottom: 30px;
+.kontakt {
+  display: flex;
+  justify-content: center;
 }
 
-br {
-  margin-bottom: 14px;
+.banner {
+  background-color: var(--rød);
 }
 
-/* --- CLASSES --- */
+.header {
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
 
 .colored_line {
   grid-column: 1/3;
   border: none;
   height: 1px;
-  background-color: #fa5d5d;
+  background-color: var(--rød);
 }
 
-.grid_1-3 {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  height: auto;
-  width: 100%;
-}
-
-.grid_1-1 {
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 10px 40px;
-  gap: 100px;
-  margin-left: 350px;
-}
-
-.headline {
-  grid-column: 1/3;
-}
-
-.aboutme {
-  grid-column: 1/3;
-  columns: 2;
-  column-gap: 100px;
-  margin-top: -100px;
-  padding-top: 0px;
-}
-
-.kompetancer {
+footer {
   display: flex;
-  align-items: baseline;
-  gap: 30px;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--rød);
+
+  p {
+    font-size: 0.7rem;
+  }
 }
 
-.banner {
-  position: fixed;
-  width: auto;
-  height: 100%;
-  background-color: #fa5d5d;
-  padding: 20px;
+@media only screen and (min-width: 500px) {
+  .foto {
+    text-align: center;
+  }
+  img {
+    width: 80%;
+  }
+
+  h4 {
+    margin-bottom: 10px;
+    line-height: 20px;
+  }
+
+  .kompetancer {
+    line-height: 35px;
+    -webkit-columns: 250px 3;
+    -moz-columns: 250px 3;
+    columns: 250px 3;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
-.about img {
-  width: 300px;
-  height: auto;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
+@media only screen and (min-width: 610px) {
+  img {
+    width: 50%;
+  }
 }
 
-.billeder_cont {
-  grid-column: 1/3;
+@media only screen and (min-width: 710px) {
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .projekter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .projekter .billede_container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .tilbyde {
+    width: 80%;
+    margin: 0 auto;
+    line-height: 35px;
+    -webkit-columns: 250px 2;
+    -moz-columns: 250px 2;
+    columns: 250px 2;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+  }
 }
 
-.billeder {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+@media only screen and (min-width: 900px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .banner {
+    grid-column: 1/2;
+    height: 100vh;
+    width: 30%;
+    position: fixed;
+  }
+
+  .grid {
+    grid-column: 2/3;
+    margin-left: -170px;
+  }
+
+  .om-mig {
+    padding-right: 10px;
+  }
+
+  .banner img {
+    width: 90%;
+  }
+
+  .kontakt {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  footer {
+    grid-column: 1/4;
+    width: 100%;
+  }
 }
